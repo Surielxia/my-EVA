@@ -1,0 +1,147 @@
+.header{
+	overflow: hidden;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+.header-logo{
+	float: left;
+	height: 60px;
+	margin: 0 60px;
+}
+.header-list{
+	overflow: hidden;
+	padding: 6px 50px 0 6px;
+}
+.header-item{
+	white-space: nowrap;
+	float: left;
+	margin-top: 7px;
+	line-height: 16px;
+	font-size: 12px;
+	padding: 0 10px;
+	color: #666;
+	border-right: 1px solid #666;
+}
+.header-item a{
+	color: #333;
+}
+.header-item a:hover{
+	color: orange;
+}
+.nav{
+	overflow: hidden;
+	border: 1px solid #FFE9D3;
+}
+.nav-left{
+	box-sizing: border-box;
+	width: 115px;
+	float: left;
+}
+.nav-center{
+	box-sizing: border-box;
+	width: 425px;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #FFE9D3;
+}
+.nav-right{
+	box-sizing: border-box;
+	width: 482px;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #FFE9D3;
+}
+.nav-title{
+	border-bottom: 1px solid #FFE9D3;
+    background: #fdf4e5;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #666;
+}
+.nav-item{
+	font-size: 12px;
+	text-align: center;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+}
+.nav-left .nav-item{
+	width: 100%;
+}
+.nav-center .nav-item{
+	width: 20%;
+}
+.nav-right .nav-item{
+	width: 20%;
+}
+.nav-item a{
+	color: #333;
+}
+.nav-item a:hover{
+	color: orange;
+}
+.tags{
+	margin-top: 4px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.tags-left{
+	line-height: 25px;
+    display: inline-block;
+    width: 60px;
+    float: left;
+    padding: 0 10px;
+    color: #888;
+    font-size: 12px;
+}
+.google{
+	font-size: 12px;
+	background: #ccc;
+	float: left;
+	margin: 7px 0;
+}
+.tags-item{
+	width: 20%;
+	text-align: center;
+	white-space: nowrap;
+	float: left;
+	margin: 4px 10px 0 10px;
+	line-height: 16px;
+	font-size: 12px;
+	padding: 0 10px;
+	border:1px solid #0066cc;
+	border-radius: 8px;
+}
+.tags-item a{
+	color: #0066cc;
+	width: 100%;
+	display: inline-block;
+}
+.tags-item a:hover{
+	color: #fff;
+	background: #0066cc;
+}
+.tags-item:hover{
+	background: #0066cc;
+}
+.footer{
+	clear: both;
+    margin-top: 4px;
+    height: 90px;
+    background: #f8f8f8;
+    border: 1px solid #aaa;
+}
+.footer-words{
+	line-height: 30px;
+	text-align: center;
+}
+.footer-pclink,.footer-mlink{
+	color: orange;
+}
+.footer-pclink{
+	font-weight: bold;
+}

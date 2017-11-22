@@ -1,0 +1,16 @@
+.detail {
+	border: 1px solid #ccc;
+}
+.detail-title {
+	line-height: 60px;
+	border-bottom: 1px dashed #ccc;
+	text-align: center;
+	font-size: 16px;
+	color: #007dc6;
+}
+.detail-content {
+	padding: 20px;
+}
+#audio{
+	display: none;
+}
