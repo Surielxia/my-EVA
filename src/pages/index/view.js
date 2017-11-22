@@ -5,6 +5,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { getIndexAction, getFriendLinkAction } from './actionCreator';
 import { View as CanvasClock } from './components/CanvasClock/';
+import { View as Echart } from './components/Echart/';
 import Swiper from 'swiper';
 
 class Index extends Component {
@@ -32,6 +33,7 @@ class Index extends Component {
 						{list}
 					</ul>
 					<CanvasClock/>
+					<Echart/>
 					<div ref={(elem) => {this.swiperContainer=elem}}>
 					    <div className="swiper-wrapper">
 					        <div className="swiper-slide">Slide 1</div>
