@@ -28,18 +28,18 @@ class Index extends Component {
 		return(
 			<div>
 				<div className="index-content">
+					<div ref={(elem) => {this.swiperContainer=elem}}>
+					    <div className="swiper-wrapper">
+					        <div className="swiper-slide"><img src={require('../../statics/images/1.jpg')}/></div>
+					        <div className="swiper-slide"><img src={require('../../statics/images/2.jpg')}/></div>
+					    </div>
+				  	</div>
 					<h3 className="index-title">VOA（美国之音）慢速英语,常速英语,官网最新内容在线收听。</h3>
 					<ul className="index-list">
 						{list}
 					</ul>
 					<CanvasClock/>
 					<Echart/>
-					<div ref={(elem) => {this.swiperContainer=elem}}>
-					    <div className="swiper-wrapper">
-					        <div className="swiper-slide">Slide 1</div>
-					        <div className="swiper-slide">Slide 2</div>
-					    </div>
-				  	</div>
 				</div>
 				<div className="index-friendlink">
 					<h3 className="index-friendlink-title">VOA友情链接</h3>
