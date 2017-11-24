@@ -1,4 +1,4 @@
-#main{
+.index-echart-main{
 	width: 600px;
 	height: 400px;
 	float: right;

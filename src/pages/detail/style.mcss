@@ -11,6 +11,6 @@
 .detail-content {
 	padding: 20px;
 }
-#audio{
+.detail-audio{
 	display: none;
 }

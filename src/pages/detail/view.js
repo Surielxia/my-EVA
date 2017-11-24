@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './style.css';
+import style from './style.mcss';
 
 export default class Detail extends Component {
 	constructor(props) {
@@ -13,9 +13,9 @@ export default class Detail extends Component {
 	}
 	render() {
 		return (
-			<div className="detail">
-				<div className="detail-title">{this.state.title}</div>
-				<audio id="audio" controls="controls" ref="detailAudio">
+			<div className={style['detail']}>
+				<div className={style['detail-title']}>{this.state.title}</div>
+				<audio className={style['detail-audio']} controls="controls" ref="detailAudio">
 					<source src={require("./1.mp3")} type="audio/mpeg" />
 				</audio>
 				<button id="palyOrPause" onClick={this.click}>播音</button>
@@ -28,12 +28,14 @@ export default class Detail extends Component {
 		this.isPlaying=false;
 	}
 	
-	click() {
+	click(e) {
 		var audio = this.refs.detailAudio;
 		if (this.isPlaying) {
-			audio.pause();	
+			audio.pause();
+			e.target.innerHTML = "播音";
 		}else {
 			audio.play();
+			e.target.innerHTML = "暂停";
 	    }
 		this.isPlaying = !this.isPlaying;
 	}

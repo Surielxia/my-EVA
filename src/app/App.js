@@ -7,6 +7,7 @@ import { View as List} from '../pages/list/';
 import store from './store';
 import { Provider } from 'react-redux';
 import './app.css';
+//import '../../node_modules/swiper/dist/css/swiper.css';
 import './swiper.css';
 
 export default class App extends Component {
@@ -14,7 +15,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<Provider store={store}>
-				<div className="wrapper">
+				<div className='wrapper'>
 					<Router history={browserHistory}>
 						<Route path="/" component={CommonWrapper}>
 							<IndexRoute component={Index}></IndexRoute>

@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router';
 import {getListChangeAction} from './actionCreator';
 import axios from 'axios';
-import './style.css';
+import style from './style.mcss';
 
 class List extends Component {
 	
 	render() {
 		const list = this.props.list.map((item, index) => {
-			return <li className="list-content-item" key={item.id}><Link to={item.link}>{item.title}</Link></li>
+			return <li className={style['list-content-item']} key={item.id}><Link to={item.link}>{item.title}</Link></li>
 		})
 		return (
-			<div className="list-content">
-				<h3 className="list-content-title">列表页</h3>
-				<ul className="list-content-list">
+			<div className={style['list-content']}>
+				<h3 className={style['list-content-title']}>列表页</h3>
+				<ul className={style['list-content-list']}>
 					{list}
 				</ul>
 			</div>
@@ -23,8 +23,15 @@ class List extends Component {
 	componentDidMount() {
 		this.getListInfo();
 	}
-	getListInfo() {
-		const id = this.props.params.id;
+
+	componentWillReceiveProps(nextProps) {
+		if(this.props.routeParams.id !== nextProps.routeParams.id) {
+			this.getListInfo(nextProps.routeParams.id);
+		}
+	}
+	getListInfo(val) {
+		const id = val || this.props.params.id;
+		console.log(id);
 		axios.get('/list.json?id=' + id)
 			.then(this.props.changeListData)
 	}

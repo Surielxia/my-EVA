@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
+import style from './style.mcss';
 
 export default class Detail extends Component {
 	constructor(props) {
@@ -10,7 +10,7 @@ export default class Detail extends Component {
 	}
 	render() {
 		return (
-			<div className="index-clock">
+			<div className={style['index-clock']}>
 				<canvas width="500" height="500" id="clock" ref="canvasClock"></canvas>
 			</div>
 		)

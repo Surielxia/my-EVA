@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Echarts from 'echarts';
-import './style.css';
+import style from './style.mcss';
 
 export default class Detail extends Component {
 	constructor(props) {
@@ -11,8 +11,8 @@ export default class Detail extends Component {
 	}
 	render() {
 		return (
-			<div className="index-echart">
-				<div id="main" ref="indexEchart" style={{width: 600+'px',height:400+'px'}}></div>
+			<div className={style['index-echart']}>
+				<div className={style['index-echart-main']} ref="indexEchart" style={{width: 600+'px',height:400+'px'}}></div>
 			</div>
 		)
 	}
